@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap');
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo Bhai 2', cursive;
+    background-color: #eaeded;
+}
+
+/* Header styles */
+.first {
+    width: 100%;
+    height: auto;
+    background-color: #f85606;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.first img {
+    width: 200px;
+    height: auto;
+    padding: 5px;
+    margin: 6px 10px;
+    border: 1px solid transparent;
+    border-radius: 20%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.flex span,
+i {
+    color: white;
+}
+
+.logo {
+    flex: 0.18;
+    margin-right: 8px;
+    justify-content: space-between;
+}
+
+.map {
+    border: 1px solid transparent;
+}
+
+.map i {
+    margin-top: 15px;
+    padding-left: 5px;
+    font-size: 17px;
+}
+
+.map div {
+    padding: 5px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.map div span:first-child {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.map div span {
+    font-weight: bold;
+}
+
+.right {
+    justify-content: space-between;
+    flex: 0.30;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    background-color: white;
+    flex: 0.5;
+    border-radius: 5px;
+    display: flex;
+    margin: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.input input {
+    outline-color: transparent;
+    width: 80%;
+    font-size: 15px;
+    padding: 5px 2px;
+    border: none;
+}
+
+.input .fa-search {
+    color: rgb(51, 51, 51);
+    padding: 10px 15px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #febd69;
+    border-radius: 0 5px 5px 0;
+}
+
+.input div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid gray;
+    background-color: rgb(236, 234, 234);
+    padding: 5px 0;
+}
+
+.input div span {
+    border-radius: 5px 0 0 5px;
+    color: rgb(51, 51, 51);
+    padding: 7px 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.input .fa-caret-down {
+    color: rgb(51, 51, 51);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.lang i {
+    margin: 0;
+    padding: 0;
+    color: gray;
+}
+
+.lang {
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 1px solid transparent;
+}
+
+.right img {
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    padding-top: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.sign {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.sign span:first-child {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.sign span {
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+}
+
+.flex .ac span {
+    font-size: 15px;
+    margin-right: 4px;
+    font-weight: bold;
+}
+
+.fa-shopping-cart {
+    font-size: 27px;
+}
+
+.ca {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cart {
+    align-items: flex-end;
+    position: relative;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.cart p {
+    position: absolute;
+    font-weight: bolder;
+    color: #131a22;
+    top: 7px;
+    right: 5px;
+}
+
+/* Navigation styles */
+.second {
+    width: 100%;
+    background-color: #febd69;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.second-1 {
+    display: flex;
+    flex: 0.30;
+}
+
+.second-1 div {
+    margin-right: 10px;
+}
+
+.second-1 div i {
+    font-size: 20px;
+    color: #131a22;
+    cursor: pointer;
+}
+
+.second-1 div span {
+    font-size: 17px;
+    color: #131a22;
+    cursor: pointer;
+}
+
+.second-2 {
+    display: flex;
+    justify-content: center;
+    flex: 0.40;
+}
+
+.second-2 input {
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+    padding: 0 5px;
+    border: 1px solid transparent;
+}
+
+.second-2 input::placeholder {
+    color: #a2a2a2;
+    font-weight: bold;
+}
+
+.second-2 input:focus {
+    outline-color: transparent;
+}
+
+.second-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.30;
+}
+
+.second-3 span {
+    font-size: 17px;
+    color: #131a22;
+    cursor: pointer;
+}
+
+/* Main content styles */
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+    padding: 10px;
+}
+
+.product-comp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.box h3 {
+    text-align: center;
+    margin: 10px;
+    color: #131a22;
+}
+
+.box p {
+    text-align: center;
+    margin: 10px;
+    color: #7a7a7a;
+}
+
+.box a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f85606;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.box a:hover {
+    background-color: #febd69;
+}
+
+/* Footer styles */
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #f85606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+}
+
+.backtop {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: #febd69;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.backtop:hover {
+    background-color: #f85606;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .first {
+        height: auto;
+    }
+    .first img {
+        width: 150px;
+        height: auto;
+        padding: 5px;
+        margin: 6px 10px;
+    }
+    .map i {
+        margin-top: 10px;
+        padding-left: 5px;
+        font-size: 14px;
+    }
+    .right img {
+        width: 25px;
+        height: 25px;
+        padding: 2px;
+        padding-top: 7px;
+        margin: 0;
+    }
+    .sign {
+        padding: 1px 3px;
+    }
+    .input input {
+        width: 60%;
+    }
+    .input .fa-search {
+        font-size: 20px;
+        padding: 7px 10px;
+    }
+    .input div span {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .second {
+        height: auto;
+    }
+    .second-1 div i {
+        font-size: 18px;
+    }
+    .second li {
+        padding: 5px 7px;
+        font-size: 13px;
+    }
+    .second-3 span {
+        padding: 5px 7px;
+        font-size: 13px;
+    }
+    .container-1 {
+        top: 130px;
+        padding: 10px;
+    }
+    .product-comp .box {
+        width: 300px;
+        height: auto;
+    }
+    .box h3 {
+        font-size: 18px;
+    }
+    .box a {
+        margin-left: 0px;
+    }
+    .box div img {
+        width: 150px;
+        height: 90px;
+        margin-left: -10%;
+    }
+    .box-a div span {
+        margin-left: 15px;
+        font-size: 12px;
+    }
+    .box-b .best {
+        height: 120px;
+    }
+    .best h3 {
+        font-size: 18px;
+        margin: 10px;
+        margin-bottom: 10px;
+    }
+    .best button {
+        width: 220px;
+        height: 25px;
+        margin-left: 8px;
+        font-size: 14px;
+    }
+    .box.box-c img {
+        margin: 0 15px;
+        height: 220px;
+        width: 270px;
+    }
+    .product-slide {
+        margin-top: 10px;
+    }
+    .footer {
+        height: auto;
+    }
+    .backtop {
+        height: 40px;
+        padding: 10px;
+    }
+    .backtop span {
+        font-size: 12px;
+    }
+    .table {
+        margin: 0 50px;
+        padding-top: 30px;
+    }
+    .table div {
+        width: 200px;
+    }
+    .t-head {
+        font-size: 14px;
+    }
+    .table li {
+        font-size: 12px;
+    }
+    .copy {
+        height: 70px;
+        padding: 20px;
+    }
+    .copy span {
+        font-size: 12px;
+    }
+    .sidebar {
+        width: 280px;
+    }
+    .hdn-head {
+        height: 50px;
+    }
+}
